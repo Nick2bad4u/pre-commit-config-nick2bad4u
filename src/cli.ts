@@ -119,17 +119,13 @@ async function run(): Promise<void> {
     }
 }
 
-async function main(): Promise<void> {
-    try {
-        await run();
-    } catch (error: unknown) {
-        const message = getErrorMessage(error);
-        process.stderr.write(`${message}\n\n${usage()}\n`);
-        process.exitCode = 1;
-    }
+try {
+    await run();
+} catch (error: unknown) {
+    const message = getErrorMessage(error);
+    process.stderr.write(`${message}\n\n${usage()}\n`);
+    process.exitCode = 1;
 }
-
-void main();
 
 function getErrorMessage(error: unknown): string {
     if (

@@ -20,6 +20,8 @@ const config = [
         files: ["src/cli.ts"],
         rules: {
             "n/hashbang": "off",
+            // The bin-only entrypoint can await startup without delaying library imports.
+            "n/no-top-level-await": "off",
             "perfectionist/sort-modules": "off",
             "unicorn/no-break-in-nested-loop": "off",
         },
