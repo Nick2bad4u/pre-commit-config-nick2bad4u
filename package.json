@@ -1,7 +1,7 @@
 {
     "$schema": "https://www.schemastore.org/package.json",
     "name": "pre-commit-config-nick2bad4u",
-    "version": "0.1.0",
+    "version": "1.0.0",
     "private": false,
     "description": "Portable shared pre-commit hook suites with a safe root-config materializer.",
     "keywords": [
